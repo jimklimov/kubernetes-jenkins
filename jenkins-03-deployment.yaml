@@ -20,6 +20,8 @@ spec:
       containers:
         - name: jenkins
           image: jenkins/jenkins:lts
+          # OPTIONAL: check for new floating-tag LTS releases whenever the pod is restarted:
+          imagePullPolicy: Always
           resources:
             limits:
               memory: "2Gi"
